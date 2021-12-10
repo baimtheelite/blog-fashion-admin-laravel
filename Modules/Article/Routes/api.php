@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Modules\Article\Http\Controllers\API\ArticleCategoryController;
 use Modules\Article\Http\Controllers\API\ArticleController;
 
 /*
@@ -21,6 +22,7 @@ use Modules\Article\Http\Controllers\API\ArticleController;
 
 Route::prefix('article')->group(function () {
     Route::get('/', [ArticleController::class, 'index']);
+    Route::get('/category', [ArticleCategoryController::class, 'index']);
 });
 
 
