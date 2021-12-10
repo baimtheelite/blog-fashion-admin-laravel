@@ -19,11 +19,11 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['*'],
+    'allowed_origins' => ['http://localhost:3000', 'https://fashion-magazine-tangerang.vercel.app', 'http://fashion-magazine-tangerang.vercel.app/#!'],
 
     'allowed_origins_patterns' => [],
 
-    'allowed_headers' => ['Authorization,Accept,Origin,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range'],
+    'allowed_headers' => ['*'],
 
     'exposed_headers' => [],
 
