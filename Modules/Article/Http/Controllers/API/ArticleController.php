@@ -2,6 +2,7 @@
 
 namespace Modules\Article\Http\Controllers\API;
 
+use App\Helpers\ResponseFormatter;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
@@ -14,11 +15,22 @@ class ArticleController extends Controller
         $show = $request->input('show', 10);
 
         $articles = Article::query()
-                    // ->with('')
-                    ->with('category')
-                    ->with('editor')
-                    ->with('author');
+            // ->with('')
+            ->with('category')
+            ->with('editor')
+            ->with('author');
 
-        return $articles->simplePaginate($show);
+        if ($articles) {
+            return ResponseFormatter::success(
+                $articles->simplePaginate($show),
+                'Data Artikel berhasil diambil'
+            );
+        } else {
+            return ResponseFormatter::error(
+                null,
+                'Data Artikel tidak ada',
+                404
+            );
+        }
     }
 }
