@@ -20,14 +20,14 @@ use Modules\Article\Http\Controllers\API\ArticleController;
 //     return $request->user();
 // });
 
-// Route::prefix('article')->group(function () {
-//     Route::get('/', [ArticleController::class, 'index']);
-//     Route::get('/category', [ArticleCategoryController::class, 'index']);
-// });
-
-Route::group(['prefix' => 'article', 'middleware' => ['cors']], function () {
+Route::middleware(['cors'])->prefix('article')->group(function () {
     Route::get('/', [ArticleController::class, 'index']);
     Route::get('/category', [ArticleCategoryController::class, 'index']);
 });
+
+// Route::group(['prefix' => 'article', 'middleware' => ['cors']], function () {
+//     Route::get('/', [ArticleController::class, 'index']);
+//     Route::get('/category', [ArticleCategoryController::class, 'index']);
+// });
 
 
