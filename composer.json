@@ -18,12 +18,12 @@
         "fruitcake/laravel-cors": "^2.0",
         "grocerycrud/enterprise": "2.*.*",
         "guzzlehttp/guzzle": "^7.0.1",
+        "ixudra/curl": "6.*",
         "kreait/firebase-php": "^5.21",
         "laravel/framework": "^8.40",
         "laravel/tinker": "^2.5",
         "nwidart/laravel-modules": "^8.2",
-        "spatie/laravel-permission": "^4.2",
-        "ixudra/curl": "6.*"
+        "spatie/laravel-permission": "^4.2"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
