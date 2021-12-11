@@ -22,7 +22,7 @@ class ArticleController extends Controller
 
         if ($articles) {
             return ResponseFormatter::success(
-                $articles->simplePaginate($show),
+                $articles->get(),
                 'Data Artikel berhasil diambil'
             );
         } else {

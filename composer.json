@@ -15,7 +15,6 @@
         "alexusmai/laravel-file-manager": "^2.5",
         "davejamesmiller/laravel-breadcrumbs": "5.x",
         "fideloper/proxy": "^4.4",
-        "fruitcake/laravel-cors": "^2.0",
         "grocerycrud/enterprise": "2.*.*",
         "guzzlehttp/guzzle": "^7.0.1",
         "ixudra/curl": "6.*",

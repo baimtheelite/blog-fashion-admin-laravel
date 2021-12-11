@@ -20,12 +20,12 @@ use Modules\Article\Http\Controllers\API\ArticleController;
 //     return $request->user();
 // });
 
-Route::prefix('article')->group(function () {
+Route::middleware(['cors'])->prefix('article')->group(function () {
     Route::get('/', [ArticleController::class, 'index']);
     Route::get('/category', [ArticleCategoryController::class, 'index']);
 });
 
-// Route::middleware(['cors'])->prefix('article')->group(function () {
+// Route::middleware(['api'])->prefix('article')->group(function () {
 //     Route::get('/', [ArticleController::class, 'index']);
 //     Route::get('/category', [ArticleCategoryController::class, 'index']);
 // });
