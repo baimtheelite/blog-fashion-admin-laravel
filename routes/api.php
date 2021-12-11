@@ -18,18 +18,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::middleware(['cors'])->prefix('article')->group(function () {
-    Route::get('/', [ArticleController::class, 'index']);
-    Route::get('/category', [ArticleCategoryController::class, 'index']);
-});
 
-
-// Route::middleware(['api'])->prefix('article')->group(function () {
-//     Route::get('/', [ArticleController::class, 'index']);
-//     Route::get('/category', [ArticleCategoryController::class, 'index']);
-// });
-
-// Route::group(['prefix' => 'article', 'middleware' => ['cors']], function () {
-//     Route::get('/', [ArticleController::class, 'index']);
-//     Route::get('/category', [ArticleCategoryController::class, 'index']);
-// });
+Route::get('/article', [APIArticleController::class, 'index'])->middleware('cors');
+Route::get('/article/category', [APIArticleCategoryController::class, 'index'])->middleware('cors');

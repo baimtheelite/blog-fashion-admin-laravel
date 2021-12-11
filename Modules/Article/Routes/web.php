@@ -12,6 +12,7 @@
 */
 
 use Illuminate\Support\Facades\Route;
+use Modules\Article\Http\Controllers\API\ArticleCategoryController as APIArticleCategoryController;
 use Modules\Article\Http\Controllers\ArticleCategoryController;
 use Modules\Article\Http\Controllers\ArticleController;
 
@@ -20,4 +21,7 @@ Route::prefix('article')->group(function() {
     Route::post('/', [ArticleController::class, 'index']);
     Route::get('/category', [ArticleCategoryController::class, 'index'])->name('article.category.index');
     Route::post('/category', [ArticleCategoryController::class, 'index']);
+
+
 });
+
