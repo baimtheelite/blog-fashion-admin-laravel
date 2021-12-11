@@ -27,10 +27,6 @@ Route::get('/home', function () {
     return view('index');
 })->middleware(['auth']);
 
-Route::get('/dashboard', function () {
-    return view('index');
-})->middleware(['auth'])->name('dashboard');
-
 Route::middleware(['auth'])->prefix('profile')->group(function() {
     Route::get('/{id?}', [ProfileController::class, 'index'])->name('profile.index');
     Route::put('/', [ProfileController::class, 'update'])->name('profile.update');
