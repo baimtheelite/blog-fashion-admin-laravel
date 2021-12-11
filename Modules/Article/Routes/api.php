@@ -16,23 +16,9 @@ use Modules\Article\Http\Controllers\API\ArticleController;
 |
 */
 
-// Route::middleware('auth:api')->get('/article', function (Request $request) {
-//     return $request->user();
-// });
-
-Route::middleware(['cors'])->prefix('article')->group(function () {
-    Route::get('/', [ArticleController::class, 'index']);
-    Route::get('/category', [ArticleCategoryController::class, 'index']);
+Route::middleware('auth:api')->get('/article', function (Request $request) {
+    return $request->user();
 });
 
-// Route::middleware(['api'])->prefix('article')->group(function () {
-//     Route::get('/', [ArticleController::class, 'index']);
-//     Route::get('/category', [ArticleCategoryController::class, 'index']);
-// });
-
-// Route::group(['prefix' => 'article', 'middleware' => ['cors']], function () {
-//     Route::get('/', [ArticleController::class, 'index']);
-//     Route::get('/category', [ArticleCategoryController::class, 'index']);
-// });
 
 
