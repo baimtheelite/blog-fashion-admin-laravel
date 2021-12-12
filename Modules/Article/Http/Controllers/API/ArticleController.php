@@ -33,4 +33,27 @@ class ArticleController extends Controller
             );
         }
     }
+
+    public function show($slug)
+    {
+
+        $article = Article::query()
+            ->with('category')
+            ->with('editor')
+            ->with('author')
+            ->where('slug', $slug);
+
+        if ($article) {
+            return ResponseFormatter::success(
+                $article->first(),
+                'Data Detail Artikel berhasil diambil'
+            );
+        } else {
+            return ResponseFormatter::error(
+                null,
+                'Data Artikel tidak ada',
+                404
+            );
+        }
+    }
 }
