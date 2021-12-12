@@ -19,5 +19,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
-Route::get('/article', [APIArticleController::class, 'index'])->middleware('cors');
-Route::get('/article/category', [APIArticleCategoryController::class, 'index'])->middleware('cors');
+
