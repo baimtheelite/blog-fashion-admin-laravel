@@ -12,6 +12,11 @@ class Article extends Model
     protected $table = 'articles';
     protected $guarded = [];
 
+    public function scopeActive($query)
+    {
+        return $query->where('status', 'published')->whereDate('publish_date', '<=', now());
+    }
+
     public function category()
     {
         // return $this->belongsToMany(ArticleCategory::class, 'article_article_categories', 'article_id', 'article_category_id');

@@ -48,4 +48,6 @@ Route::get('/fcm', [FCMNotificationController::class, 'notification'])->name('fc
 
 
 
+
+
 require __DIR__.'/auth.php';
