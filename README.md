@@ -1,14 +1,13 @@
-# Template Starter CMS!
+# Content Management Blog Fashion Tangerang
 
-Template Starter CMS
-
+Dibangun dengan framework laravel, web ini berfungsi untuk mengatur content di website https://fashion-magazine-tangerang.vercel.app
 
 ## Modul Tersedia
 
  - User
  - Artikel
 
-## Package Tersesia
+## Package Tersedia
 
  - Laravel Module
  - Spatie Permission
